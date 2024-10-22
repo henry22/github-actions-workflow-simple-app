@@ -38,7 +38,7 @@ jobs:
         uses: docker/build-push-action@v6.9.0
         with:
           push: true
-          tag: ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.CONTAINER_NAME }}:${{ github.sha }}
+          tags: ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.CONTAINER_NAME }}:${{ github.sha }}
           file: ./Dockerfile
 
   # deployToAKS:
